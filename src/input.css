@@ -54,6 +54,7 @@ html{
     height: 14px !important;
     background-color: #CBCBCB !important;
     border-radius: 100%;
+    transition: .3s linear;
 }
 
 .owl-dot.active{
