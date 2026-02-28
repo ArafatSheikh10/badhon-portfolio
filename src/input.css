@@ -8,6 +8,10 @@
     --font-primary: "Poppins", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .header-area.sticky{
     position: fixed;
     left: 50%;

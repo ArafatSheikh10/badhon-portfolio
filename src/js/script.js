@@ -42,27 +42,26 @@ $(document).ready(function(){
 
 
 
+    // Scroll 
+    const navLinks = document.querySelectorAll('.nav-menu a, .sidebar-menu a');
 
-    // Select all navigation links
-    const navLinks = document.querySelectorAll('.nav-menu ul li a');
-
-    // Add a click event listener to each link
     navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent the default jump behavior
-
-        // Get the target section's ID from the link's href attribute
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        // Use the scrollIntoView method with smooth behavior
-        if (targetSection) {
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start' // Aligns the top of the section to the top of the viewport
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+    
+            if (targetSection) {
+                const headerEl = document.querySelector('.header-area');
+                const headerHeight = headerEl ? headerEl.offsetHeight : 0;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+    
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
-        }
-    });
     });
 
 
