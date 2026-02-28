@@ -10,27 +10,40 @@
     <link rel="stylesheet" href="src/input.css">
     <title>Ui/Ux</title>
 </head>
-<body class="h-screen font-primary">
+<body class="h-screen font-primary scroll-smooth">
     
     
     <!---------------------Header Area Start--------------------->
-    <header class="px-3 absolute lg:top-15 top-8 left-1/2 -translate-1/2 w-full z-999">
+    <header class="header-area px-3 absolute lg:top-15 top-8 left-1/2 -translate-1/2 w-full z-999">
         <div class="max-w-327 w-full m-auto flex items-center justify-between bg-black p-4 mt-10 rounded-[50px]">
             <a href="" class="inline-block md:max-w-40 max-w-30 h-auto shrink-0"><img src="src/image/logo.png" alt="logo"></a>
-            <ul class="hidden lg:flex items-center">
+            <ul class="nav-menu hidden lg:flex items-center">
                 <li><a href="" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">Home</a></li>
-                <li><a href="" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">Services</a></li>
-                <li><a href="" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">Skills</a></li>
-                <li><a href="" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">About</a></li>
-                <li><a href="" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">Portfolio</a></li>
+                <li><a href="#services-area" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">Services</a></li>
+                <li><a href="#why-me" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">About</a></li>
+                <li><a href="#skill-area" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">Skill</a>
+                <li><a href="#portfolio-area" class="inline-flex py-3 lg:px-10 md:px-7 text-white text-md font-medium rounded-3xl transition-all duration-300 hover:bg-primary">Portfolio</a>
             </ul>
             <div class="flex items-center gap-5">
                 <a href="" class="inline-flex md:py-3 py-2 lg:px-10 md:px-7 px-4 bg-white text-primary sm:text-lg text-sm font-medium rounded-4xl text-shadow-2xs text-shadow-black transition-all duration-300 hover:bg-primary hover:text-white">Contact</a>
-                <button class="flex lg:hidden flex-col gap-1 cursor-pointer">
-                    <span class="inline-block w-5 h-[2px] bg-white rounded-[3px]"></span>
-                    <span class="inline-block w-4 h-[2px] bg-white rounded-[3px]"></span>
-                    <span class="inline-block w-5 h-[2px] bg-white rounded-[3px]"></span>
-                </button>
+                <div class="relative">
+                    <button class="menu_trigger flex lg:hidden flex-col gap-1 cursor-pointer">
+                        <span class="inline-block w-5 h-[2px] bg-white rounded-[3px]"></span>
+                        <span class="inline-block w-4 h-[2px] bg-white rounded-[3px]"></span>
+                        <span class="inline-block w-5 h-[2px] bg-white rounded-[3px]"></span>
+                    </button> 
+                    <div class="sidebar-menu">
+                       <div class="mt-10 flex lg:hidden justify-between items-start bg-black w-55 min-h-50 p-5 rounded-xl z-1000">
+                            <ul class="flex flex-wrap gap-5 mt-1">
+                                <li><a href="" class="text-sm text-white font-regular decoration-none py-1 px-3 border-2 border-white rounded-md transition-colors duration-500 hover:border-red-500">Home</a></li>
+                                <li><a href="#services-area" class="text-sm text-white font-regular decoration-none py-1 px-3 border-2 border-white rounded-md transition-colors duration-500 hover:border-red-500">Services</a></li>
+                                <li><a href="#why-me" class="text-sm text-white font-regular decoration-none py-1 px-3 border-2 border-white rounded-md transition-colors duration-500 hover:border-red-500">About</a></li>
+                                <li><a href="#skill-area" class="text-sm text-white font-regular decoration-none py-1 px-3 border-2 border-white rounded-md transition-colors duration-500 hover:border-red-500">Skill</a></li>
+                                <li><a href="#portfolio-area" class="text-sm text-white font-regular decoration-none py-1 px-3 border-2 border-white rounded-md transition-colors duration-500 hover:border-red-500">Portfolio</a></li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>  
             </div>
         </div>
     </header>
@@ -100,7 +113,7 @@
 
 
     <!---------------------Services Area Start--------------------->
-    <section class="services-area mg:py-28 py-18 px-3">
+    <section class="services-area mg:py-28 py-18 px-3" id="services-area">
         <div class="max-w-327 w-full m-auto">
             <div class="flex flex-col md:flex-row items-center justify-between md:gap-10 gap-6">
                 <h2 class="md:text-5xl text-3xl font-medium text-center md:text-left">My <span class="text-primary">Services</span></h2>
@@ -163,11 +176,11 @@
 
 
     <!---------------------Skill Area Start--------------------->
-    <section class="md:pt-35 pt-10 md:pb-35 pb-15 px-3">
+    <section class="md:pt-35 pt-10 md:pb-35 pb-15 px-3" id="skill-area">
         <div class="max-w-327 w-full m-auto">
             <h2 class="md:text-5xl text-3xl font-medium text-center"><span class="text-primary">Skills</span> I Mastered</h2>
             <div class="flex flex-col md:flex-row items-center justify-between gap-20 md:gap-10 mt-10">
-                <div class="grid grid-cols-1 gap-10 md:gap-6">
+                <div class="hidden md:grid grid-cols-1 gap-10 md:gap-6 hidden">
                     <div class="flex flex-col gap-4 text-center md:text-left">
                         <h3 class="xl:text-4xl text-2xl font-medium">Collaboration</h3>
                         <p class="md:max-w-122 md:text-base text-sm text-gray-500">Working smoothly with developers and using version control systems.Use Design Systems for Making more easy to develop.</p>
@@ -218,7 +231,7 @@
 
 
     <!---------------------Why Me Area Start--------------------->
-    <section class="lg:p-25 p-15 px-3 bg-[#EAE4F9] rounded-2xl">
+    <section class="lg:p-25 p-15 px-3 bg-[#EAE4F9] rounded-2xl" id="why-me">
         <div class="md:max-w-327 max-w-112 m-auto grid md:grid-cols-2 items-center gap-y-10">
             <div class="w-full">
                 <img src="src/image/why-me.png" alt="why me" class="w-full h-full object-contain">
@@ -259,7 +272,7 @@
 
 
     <!---------------------Portfolio Area Start--------------------->
-    <section class="md:pt-25 pt-15 px-3">
+    <section class="md:pt-25 pt-15 px-3" id="portfolio-area">
         <div class="md:max-w-327 m-auto">
             <div class="flex flex-col md:flex-row items-center justify-between gap-8">
                 <h2 class="md:text-5xl text-3xl font-medium leading-8 md:leading-15 text-center md:text-left">Lets have a look at my<span class="text-primary"> <br class="hidden md:block"> Portfolio</span></h2>
@@ -347,7 +360,7 @@
 
 
     <!---------------------Footer Area Start--------------------->
-    <section class="bg-[#150C28] pt-17 pb-8 px-3 rounded-t-2xl">
+    <section class="bg-[#150C28] pt-17 pb-8 px-3 rounded-t-2xl" id="footer-area">
         <div class="md:max-w-327 m-auto">
             <div class="flex flex-col sm:flex-row items-center justify-between border-b border-[#50526B] pb-15 gap-y-5">
                 <h2 class="md:text-5xl text-3xl font-medium leading-15 text-white text-center md:text-left">Lets Connect there</h2>

@@ -8,6 +8,18 @@
     --font-primary: "Poppins", sans-serif;
 }
 
+.header-area.sticky{
+    position: fixed;
+    left: 50%;
+    width: 100%;
+}
+
+.sidebar-menu{
+    position: absolute;
+    right: 5%;
+    display: none;
+}
+
 .border-circle::after{
     animation: border-circle 2s linear infinite;
 }
